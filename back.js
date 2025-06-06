@@ -56,15 +56,15 @@ app.use('/', require('./routes/authRoutes'));
 const orderRoutes = require('./routes/order');
 app.use('/api', orderRoutes);
 
-// 404 handler (optional but recommended)
+// Route not found
 app.use((req, res) => {
-  res.status(404).render('404', { pageTitle: 'Page Not Found' });
+  res.status(404).render('404'); // هنا المشكلة لو الملف مش موجود
 });
 
-// Global error handler (optional)
+// Internal server error
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).render('500', { pageTitle: 'Server Error', error: err });
+  res.status(500).render('500'); // هنا المشكلة لو الملف مش موجود
 });
 
 // ✅ Start server
