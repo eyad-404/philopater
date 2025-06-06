@@ -99,7 +99,7 @@ router.get('/users', verifyToken, requireJwtAdmin, (req, res) => {
 
 // صفحات الدخول والتسجيل
 router.get('/login', (req, res) => {
-  res.render('login', { pageTitle: 'Login' });
+  res.render('Login', { pageTitle: 'Login' });
 });
 
 router.get('/signin', (req, res) => {
