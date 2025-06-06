@@ -577,6 +577,7 @@ backbtn.addEventListener('click', () => {
   backbtn.style.display = 'none';
   page.style.display = 'none';
   addToCartBtn.style.display = 'block';
+  document.querySelector('.search-bar-container').style.display = 'block';
 });
 
 // ✅ الانتقال إلى صفحة الدفع
